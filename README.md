@@ -1,12 +1,19 @@
-# Personal Portfolio
+# Mohan Varma Portfolio
 
-A lightweight portfolio website for Mohan, inspired by a modern software-focused personal brand while keeping the design original and minimal.
+A minimal static portfolio website for an AI engineer.
 
-## Structure
+## What’s in this project
 
-- `index.html` — primary page structure
-- `styles.css` — design system and layout
-- `script.js` — theme toggle and small interactions
+- Single-page personal site with About, Experience, Stack, Education, and Contact sections
+- Responsive layout for desktop and mobile
+- Light/dark theme toggle with saved preference
+- Small interactive UI behaviors and animated mascot styling
+
+## Files
+
+- `index.html` — page structure and content
+- `styles.css` — styling, color themes, layout, and motion
+- `script.js` — theme switching, mobile nav, and minor interactions
 
 ## Run locally
 
@@ -15,9 +22,6 @@ cd myportfolio
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Then open: http://localhost:8000
 
-## Notes
-
-This project is intentionally static and simple so it is easy to extend over time with more work samples, case studies, and personal details.
-# mohan-portfolio
+This project is a static frontend and does not require a build step or dependencies.
