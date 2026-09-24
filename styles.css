@@ -630,6 +630,38 @@ html[data-theme="light"] .toggle-thumb {
   font-weight: 600;
 }
 
+.edu-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.edu-card {
+  padding: 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.edu-meta {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.edu-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.edu-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 1rem 0 2rem;
