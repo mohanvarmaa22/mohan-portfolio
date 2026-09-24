@@ -1,311 +1,280 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mohan Varma — AI Engineer building production-ready LLM, cloud, and backend systems."
+      content="Mohan Varma, AI Engineer building production-ready LLM, cloud, and backend systems."
     />
     <title>Mohan Varma | AI Engineer</title>
+
+    <!-- Sets theme + js flag before first paint so there is no flash -->
+    <script>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add("js");
+        var t = null;
+        try { t = localStorage.getItem("portfolio-theme"); } catch (e) {}
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        r.setAttribute("data-theme", t);
+      })();
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='17' rx='11' ry='14' fill='%231e2430'/%3E%3Cellipse cx='16' cy='22' rx='7' ry='8' fill='%23f4f5f0'/%3E%3Ccircle cx='12' cy='12' r='2.6' fill='white'/%3E%3Ccircle cx='20' cy='12' r='2.6' fill='white'/%3E%3Cpath d='M13 16 L16 19 L19 16 Z' fill='%23e0a02e'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="container nav-wrap">
-          <a href="#home" class="brand" aria-label="Go to home section">
-            <span class="brand-mark">MV</span>
-            <span class="brand-text">Mohan Varma</span>
-          </a>
+    <header class="site-header">
+      <div class="container bar">
+        <a href="#home" class="brand">Mohan Varma</a>
 
-          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+        <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#stack">Stack</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bar-tools">
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
+            <span class="theme-glyph" aria-hidden="true"></span>
           </button>
-
-          <nav class="site-nav" aria-label="Main navigation">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#stack">Stack</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
-            <span class="toggle-track">
-              <span class="toggle-thumb"></span>
-            </span>
-            <span id="themeLabel">Dark</span>
-          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <section id="home" class="hero">
-          <div class="container hero-grid">
-            <div class="hero-copy">
-              <p class="eyebrow">AI Engineer • LLM Platforms • Cloud Systems • Backend Engineering</p>
-              <h1>Building secure, scalable, production-ready AI systems for real enterprises.</h1>
-              <p class="lead">
-                I’m Mohan Varma, an AI Engineer with hands-on production experience building enterprise AI and
-                LLM platforms, cloud integrations, and backend systems across Python, FastAPI, Kubernetes, and AWS.
-              </p>
-
-              <div class="cta-row">
-                <a class="btn btn-primary" href="#experience">View experience</a>
-                <a class="btn btn-secondary" href="#education">Education</a>
-                <a class="btn btn-secondary" href="#contact">Let’s talk</a>
-              </div>
-
-              <ul class="mini-stats" aria-label="Highlights">
-                <li><strong>2+</strong><span>Years building AI products</span></li>
-                <li><strong>10+</strong><span>Systems & prototypes shipped</span></li>
-                <li><strong>∞</strong><span>Curiosity, iteration, and learning</span></li>
-              </ul>
-            </div>
-
-            <div class="hero-visual" aria-label="Profile card">
-              <div class="profile-card">
-                <div class="avatar-wrap">
-                  <div class="avatar">MV</div>
-                </div>
-
-                <div class="status-badge">Available for AI engineering roles</div>
-
-                <div class="card-grid">
-                  <div>
-                    <span class="label">Based in</span>
-                    <strong>Hyderabad, India</strong>
-                  </div>
-                  <div>
-                    <span class="label">Focus</span>
-                    <strong>LLM & Cloud</strong>
-                  </div>
-                  <div>
-                    <span class="label">Current</span>
-                    <strong>Associate AI Engineer</strong>
-                  </div>
-                  <div>
-                    <span class="label">Mode</span>
-                    <strong>Production</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero container">
+        <div class="hero-grid">
+          <div class="hero-copy intro">
+            <p class="where">Hyderabad, India</p>
+            <h1>I build the infrastructure that lets companies run LLMs safely.</h1>
+            <p class="lede">
+              I’m Mohan, an Associate AI Engineer at Cornerstone OnDemand. I work on LLM gateways,
+              evaluation, and the backend systems around them, mostly in Python on AWS and Kubernetes.
+            </p>
+            <p class="hero-links">
+              <a class="link" href="#experience">Read about my work</a>
+              <a class="link" href="mailto:mohanvarma1022@gmail.com">Email me</a>
+            </p>
+            <p class="status">Open to AI engineering roles</p>
           </div>
-        </section>
 
-        <section id="about" class="section">
-          <div class="container">
-            <div class="section-heading">
-              <p class="eyebrow">About</p>
-              <h2>Engineer with a product mindset.</h2>
+          <div class="figure" data-mo="hero">
+            <div class="placard">
+              <p class="placard-title">Guardrails</p>
+              <p class="placard-line" role="status" aria-live="polite">No PII past this point.</p>
             </div>
+            <button class="mo-btn" type="button" aria-label="Talk to the penguin bouncer">
+              <svg class="mo" viewBox="0 0 260 290" role="img" aria-label="A penguin in a bow tie and earpiece, arms crossed like a nightclub bouncer">
+                <g class="mo-bob">
+                  <!-- body -->
+                  <path class="os f-coat" d="M130 22 C182 22 208 70 210 130 C212 200 200 250 196 290 L64 290 C60 250 48 200 50 130 C52 70 78 22 130 22 Z" />
+                  <!-- belly -->
+                  <path class="o f-belly" d="M130 104 C170 104 186 145 186 195 C186 238 172 272 168 290 L92 290 C88 272 74 238 74 195 C74 145 90 104 130 104 Z" />
+                  <!-- feet -->
+                  <ellipse class="o f-beak" cx="98" cy="285" rx="24" ry="7" />
+                  <ellipse class="o f-beak" cx="162" cy="285" rx="24" ry="7" />
 
-            <div class="about-grid">
-              <div class="about-copy">
-                <p>
-                  I’m an AI Engineer with production experience building enterprise AI and LLM platforms at
-                  Cornerstone OnDemand. My work spans multi-tenant LLM gateways, AWS Bedrock integrations,
-                  model routing, AI governance, PII protection, and LLM evaluation pipelines.
-                </p>
-                <p>
-                  I enjoy designing secure, scalable systems that are production-ready and practical to operate.
-                  My background combines backend engineering, cloud infrastructure, and applied AI delivery,
-                  with a strong focus on reliability, observability, and governance.
-                </p>
-              </div>
+                  <!-- bow tie -->
+                  <path class="o f-accent" d="M130 128 L104 114 L104 142 Z" />
+                  <path class="o f-accent" d="M130 128 L156 114 L156 142 Z" />
+                  <rect class="o f-accent" x="122" y="120" width="16" height="16" rx="4" />
 
-              <div class="value-panel">
-                <h3>What I care about</h3>
-                <ul>
-                  <li>Reliable AI systems over flashy but fragile prototypes</li>
-                  <li>Clear architecture that scales with complexity</li>
-                  <li>Shipping useful products, not just experiments</li>
-                  <li>Continuous learning and thoughtful iteration</li>
-                </ul>
-              </div>
-            </div>
+                  <!-- earpiece -->
+                  <path class="cable" d="M62 80 C54 98 70 112 64 132" />
+                  <circle class="o f-belly" cx="62" cy="76" r="5" />
+                  <circle class="f-belly" cx="64" cy="135" r="2.6" />
+
+                  <!-- arms crossed: left flipper, then the right one (which lifts to say "halt") -->
+                  <path class="fl-o" d="M62 138 Q66 200 138 198" />
+                  <path class="fl-i" d="M62 138 Q66 200 138 198" />
+                  <g class="mo-arm">
+                    <path class="fl-o" d="M198 138 Q194 206 120 202" />
+                    <path class="fl-i" d="M198 138 Q194 206 120 202" />
+                  </g>
+
+                  <!-- face -->
+                  <g class="mo-head">
+                    <circle class="f-belly" cx="106" cy="64" r="13" />
+                    <circle class="f-belly" cx="154" cy="64" r="13" />
+                    <g class="mo-pupils">
+                      <circle class="pupil" cx="106" cy="64" r="5" />
+                      <circle class="pupil" cx="154" cy="64" r="5" />
+                    </g>
+                    <!-- flat eyelids: deadpan by default, lower when suspicious -->
+                    <path class="lid" d="M90 51 A16 16 0 0 1 122 51 Z" />
+                    <path class="lid" d="M138 51 A16 16 0 0 1 170 51 Z" />
+                    <path class="o f-beak" d="M116 84 Q130 78 144 84 Q138 104 130 108 Q122 104 116 84 Z" />
+                  </g>
+                </g>
+              </svg>
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="education" class="section alt-section">
-          <div class="container">
-            <div class="section-heading">
-              <p class="eyebrow">Education</p>
-              <h2>Academic foundation.</h2>
+      <!-- ABOUT -->
+      <section id="about" class="row container">
+        <h2 class="row-title">About</h2>
+        <div class="row-body">
+          <p class="prose">
+            At Cornerstone OnDemand I work on a multi-tenant LLM gateway on AWS Bedrock: model routing,
+            governance controls, PII protection, and the evaluation pipelines that show whether a model
+            is doing its job.
+          </p>
+          <p class="plain">
+            Earlier I built backend APIs, event-driven systems, and a RAG search tool for recruiters.
+            I like systems that are easy to operate: observable, secure, and clear enough to reason
+            about when something breaks.
+          </p>
+
+          <h3 class="mini-title">What I care about</h3>
+          <ul class="cares">
+            <li>LLM platform design and AI governance</li>
+            <li>Secure, observable backend systems</li>
+            <li>Architecture that stays clear as it grows</li>
+            <li>Reliability you can measure</li>
+          </ul>
+
+          <p class="plain langs">I speak English, Hindi, and Telugu.</p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="row container">
+        <h2 class="row-title">Experience</h2>
+        <div class="row-body">
+          <article class="job">
+            <div class="job-head">
+              <h3>Cornerstone OnDemand</h3>
+              <span class="when">Apr 2026 to present</span>
             </div>
+            <p class="role">Associate AI Engineer</p>
+            <p class="desc">
+              Contributing to a centralized AI Gateway and LLM platform for secure, multi-tenant
+              enterprise GenAI workloads on AWS Bedrock, including governance controls, model routing,
+              and usage hardening.
+            </p>
+          </article>
 
-            <div class="edu-layout">
-              <div class="edu-card">
-                <p class="edu-meta">Amrita Vishwa Vidyapeetham</p>
-                <h3>B.Tech in Electrical and Computer Engineering</h3>
-                <p>
-                  Oct 2021 — Aug 2025 | CGPA: 8.6 / 10.0
-                </p>
-              </div>
-
-              <div class="edu-card" style="margin-top: 1rem;">
-                <p class="edu-meta">Narayana Junior College</p>
-                <h3>Intermediate (MPC)</h3>
-                <p>
-                  95.4%
-                </p>
-              </div>
+          <article class="job">
+            <div class="job-head">
+              <h3>Cornerstone OnDemand</h3>
+              <span class="when">May 2025 to Apr 2026</span>
             </div>
-          </div>
-        </section>
+            <p class="role">Junior Software Engineer, AI / Platform Engineering</p>
+            <p class="desc">
+              Built LLM evaluation pipelines, AI content generation workflows, document processing
+              services, and event-driven gamification infrastructure on Apache Pulsar.
+            </p>
+          </article>
 
-        <section id="experience" class="section">
-          <div class="container">
-            <div class="section-heading">
-              <p class="eyebrow">Experience</p>
-              <h2>Where I’ve been building.</h2>
+          <article class="job">
+            <div class="job-head">
+              <h3>B Commune</h3>
+              <span class="when">Dec 2024 to Mar 2025</span>
             </div>
+            <p class="role">Back End Developer Intern</p>
+            <p class="desc">
+              Built job posting and application backend APIs in FastAPI, and a RAG-powered candidate
+              search system for recruiter queries.
+            </p>
+          </article>
+        </div>
+      </section>
 
-            <div class="timeline">
-              <article class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                  <div class="timeline-meta">Apr 2026 — Present</div>
-                  <h3>Cornerstone OnDemand</h3>
-                  <p class="role">Associate AI Engineer</p>
-                  <p>
-                    Contributed to a centralized AI Gateway and LLM platform for secure, multi-tenant enterprise
-                    GenAI workloads on AWS Bedrock, including governance controls, model routing, and usage hardening.
-                  </p>
-                </div>
-              </article>
-
-              <article class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                  <div class="timeline-meta">May 2025 — Apr 2026</div>
-                  <h3>Cornerstone OnDemand</h3>
-                  <p class="role">Junior Software Engineer – AI / Platform Engineering</p>
-                  <p>
-                    Built LLM evaluation pipelines, AI content generation workflows, document processing services,
-                    and event-driven gamification infrastructure on Apache Pulsar.
-                  </p>
-                </div>
-              </article>
-
-              <article class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                  <div class="timeline-meta">Dec 2024 — Mar 2025</div>
-                  <h3>B Commune</h3>
-                  <p class="role">Back End Developer Intern</p>
-                  <p>
-                    Built job posting and application backend APIs in FastAPI and developed a RAG-powered
-                    candidate search system for recruiter queries.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="stack" class="section alt-section">
-          <div class="container">
-            <div class="section-heading">
-              <p class="eyebrow">Stack</p>
-              <h2>Tools I use to build.</h2>
-            </div>
-
-            <div class="skill-blocks">
-              <div class="skill-group">
-                <h3>LLM & AI</h3>
-                <div class="chip-list">
-                  <span>AWS Bedrock</span>
-                  <span>LLM Guardrails</span>
-                  <span>Model Routing</span>
-                  <span>RAG</span>
-                  <span>Prompt Engineering</span>
-                  <span>DeepEval</span>
-                  <span>MLflow</span>
-                  <span>LangChain</span>
-                </div>
-              </div>
-
-              <div class="skill-group">
-                <h3>Backend & Systems</h3>
-                <div class="chip-list">
-                  <span>Python</span>
-                  <span>FastAPI</span>
-                  <span>AsyncIO</span>
-                  <span>Pydantic</span>
-                  <span>REST APIs</span>
-                  <span>Apache Pulsar</span>
-                  <span>ClickHouse</span>
-                </div>
-              </div>
-
-              <div class="skill-group">
-                <h3>Security & Governance</h3>
-                <div class="chip-list">
-                  <span>JWT / JWKS</span>
-                  <span>PII Protection</span>
-                  <span>Tenant Management</span>
-                  <span>Rate Limiting</span>
-                  <span>Twistlock</span>
-                  <span>BlackDuck</span>
-                </div>
-              </div>
-
-              <div class="skill-group">
-                <h3>Infra & DevOps</h3>
-                <div class="chip-list">
-                  <span>Kubernetes</span>
-                  <span>Helm</span>
-                  <span>Docker</span>
-                  <span>AWS EKS</span>
-                  <span>Terraform</span>
-                  <span>GPU / CUDA</span>
-                  <span>Prometheus</span>
-                  <span>Grafana</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="section">
-          <div class="container contact-wrap">
+      <!-- STACK -->
+      <section id="stack" class="row container">
+        <h2 class="row-title">Stack</h2>
+        <div class="row-body">
+          <dl class="stack">
             <div>
-              <p class="eyebrow">Contact</p>
-              <h2>Let’s build something useful.</h2>
+              <dt>LLM and AI</dt>
+              <dd>AWS Bedrock, LLM guardrails, model routing, RAG, prompt engineering, DeepEval, MLflow, LangChain</dd>
             </div>
-
-            <div class="contact-card">
-              <p>
-                If you’re looking for a thoughtful engineer who enjoys building secure, scalable, and practical AI systems, I’d love to connect.
-              </p>
-              <div class="contact-links">
-                <a href="tel:+919347201829">+91 93472 01829</a>
-                <a href="mailto:mohanvarma1022@gmail.com">mohanvarma1022@gmail.com</a>
-                <a href="https://linkedin.com/in/mohan-varma-bh" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/mohanvarma22" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
+            <div>
+              <dt>Backend</dt>
+              <dd>Python, FastAPI, AsyncIO, Pydantic, REST APIs, Apache Pulsar, ClickHouse</dd>
             </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="container footer-inner">
-          <p>© <span id="year"></span> Mohan Varma</p>
-          <p>Built with curiosity and a lot of iteration.</p>
+            <div>
+              <dt>Security</dt>
+              <dd>JWT and JWKS, PII protection, tenant management, rate limiting, Twistlock, BlackDuck</dd>
+            </div>
+            <div>
+              <dt>Infrastructure</dt>
+              <dd>Kubernetes, Helm, Docker, AWS EKS, Terraform, GPU and CUDA, Prometheus, Grafana</dd>
+            </div>
+          </dl>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="row container">
+        <h2 class="row-title">Education</h2>
+        <div class="row-body">
+          <article class="job">
+            <div class="job-head">
+              <h3>B.Tech in Electrical and Computer Engineering</h3>
+              <span class="when">Oct 2021 to Aug 2025</span>
+            </div>
+            <p class="role">Amrita Vishwa Vidyapeetham</p>
+            <p class="desc">CGPA 8.6 / 10.0</p>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Intermediate (MPC)</h3>
+            </div>
+            <p class="role">Narayana Junior College</p>
+            <p class="desc">95.4%</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact container">
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <h2>Let’s build something useful.</h2>
+            <p class="plain">
+              If you’re looking for an engineer who enjoys building secure, scalable, and practical AI
+              systems, I’d like to hear from you.
+            </p>
+            <p class="mail"><a class="link" href="mailto:mohanvarma1022@gmail.com">mohanvarma1022@gmail.com</a></p>
+            <p class="other-links">
+              <a class="link" href="tel:+919347201829">+91 93472 01829</a>
+              <a class="link" href="https://linkedin.com/in/mohan-varma-bh" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="link" href="https://github.com/mohanvarma22" target="_blank" rel="noreferrer">GitHub</a>
+            </p>
+          </div>
+
+          <div class="figure figure-small" data-mo="contact">
+            <div class="placard">
+              <p class="placard-title">Guardrails</p>
+              <p class="placard-line" role="status" aria-live="polite">Cleared for entry.</p>
+            </div>
+            <button class="mo-btn" type="button" aria-label="Talk to the penguin bouncer"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Mohan Varma</p>
+        <p>Set in Source Serif 4 and Figtree.</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
