@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kushal Banda — AI Engineer building reliable AI products and production systems."
+    />
+    <title>Kushal Banda | AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a href="#home" class="brand" aria-label="Go to home section">
+            <span class="brand-mark">KB</span>
+            <span class="brand-text">Kushal Banda</span>
+          </a>
+
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+            </span>
+            <span id="themeLabel">Dark</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">AI Engineer • Multi-Agent Systems • RAG • Production ML</p>
+              <h1>Building AI systems that feel useful, reliable, and production-ready.</h1>
+              <p class="lead">
+                I design and ship AI products that connect research with real-world workflows — from
+                product thinking and orchestration to inference systems and deployment.
+              </p>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="#projects">View my work</a>
+                <a class="btn btn-secondary" href="#contact">Let’s talk</a>
+              </div>
+
+              <ul class="mini-stats" aria-label="Highlights">
+                <li><strong>2+</strong><span>Years building AI products</span></li>
+                <li><strong>10+</strong><span>Systems & prototypes shipped</span></li>
+                <li><strong>∞</strong><span>Curiosity, iteration, and learning</span></li>
+              </ul>
+            </div>
+
+            <div class="hero-visual" aria-label="Profile card">
+              <div class="profile-card">
+                <div class="avatar-wrap">
+                  <div class="avatar">KB</div>
+                </div>
+
+                <div class="status-badge">Available for AI product work</div>
+
+                <div class="card-grid">
+                  <div>
+                    <span class="label">Based in</span>
+                    <strong>Hyderabad, IN</strong>
+                  </div>
+                  <div>
+                    <span class="label">Focus</span>
+                    <strong>AI Delivery</strong>
+                  </div>
+                  <div>
+                    <span class="label">Current</span>
+                    <strong>AI Engineer</strong>
+                  </div>
+                  <div>
+                    <span class="label">Mode</span>
+                    <strong>Building</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">About</p>
+              <h2>Engineer with a product mindset.</h2>
+            </div>
+
+            <div class="about-grid">
+              <div class="about-copy">
+                <p>
+                  I’m a builder at the intersection of AI, systems design, and software delivery. I enjoy
+                  taking ideas from rough prototypes to production-grade experiences that teams can trust.
+                </p>
+                <p>
+                  My work focuses on agent workflows, retrieval pipelines, tool orchestration, and evolutionary
+                  product design where improvements compound over time rather than just one-off demos.
+                </p>
+              </div>
+
+              <div class="value-panel">
+                <h3>What I care about</h3>
+                <ul>
+                  <li>Reliable AI systems over flashy but fragile prototypes</li>
+                  <li>Clear architecture that scales with complexity</li>
+                  <li>Shipping useful products, not just experiments</li>
+                  <li>Continuous learning and thoughtful iteration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="section alt-section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Experience</p>
+              <h2>Where I’ve been building.</h2>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta">Feb 2025 — Present</div>
+                  <h3>Hivel AI</h3>
+                  <p class="role">Applied AI Engineer</p>
+                  <p>
+                    Built and improved multi-agent AI systems for reliable chatbot workflows, orchestration,
+                    and production-grade response quality.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta">Independent work</div>
+                  <h3>CommitRecap</h3>
+                  <p class="role">Creator</p>
+                  <p>
+                    Built a tool to turn a year of git history into a clean, shareable recap of coding activity,
+                    habits, and milestones.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <div class="timeline-meta">VS Code ecosystem</div>
+                  <h3>Graphy</h3>
+                  <p class="role">Creator • VS Code Extension</p>
+                  <p>
+                    Designed a workspace summarizer that helps developers and AI tools understand codebase
+                    structure and context faster.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Projects</p>
+              <h2>Selected work.</h2>
+            </div>
+
+            <div class="project-grid">
+              <article class="project-card">
+                <div class="project-head">
+                  <span class="project-tag">AI Product</span>
+                  <span class="project-year">2025</span>
+                </div>
+                <h3>Lucy</h3>
+                <p>
+                  A multi-agent AI chatbot experience focused on reliability, structured responses, and user trust.
+                </p>
+                <ul>
+                  <li>Agent orchestration</li>
+                  <li>Prompt optimization</li>
+                  <li>Observability and cost control</li>
+                </ul>
+              </article>
+
+              <article class="project-card">
+                <div class="project-head">
+                  <span class="project-tag">Developer Tool</span>
+                  <span class="project-year">2024</span>
+                </div>
+                <h3>Graphy</h3>
+                <p>
+                  A VS Code extension that produces an AI-friendly summary of workspace structure and content at a glance.
+                </p>
+                <ul>
+                  <li>Repo inspection</li>
+                  <li>Tree summaries</li>
+                  <li>Quick AI context generation</li>
+                </ul>
+              </article>
+
+              <article class="project-card">
+                <div class="project-head">
+                  <span class="project-tag">Personal Utility</span>
+                  <span class="project-year">2024</span>
+                </div>
+                <h3>CommitRecap</h3>
+                <p>
+                  A polished profile summarizer for Git activity, designed to help people tell a clearer story about their work.
+                </p>
+                <ul>
+                  <li>Year-in-review design</li>
+                  <li>Automated insight extraction</li>
+                  <li>Shareable output</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="stack" class="section alt-section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Stack</p>
+              <h2>Tools I use to build.</h2>
+            </div>
+
+            <div class="skill-blocks">
+              <div class="skill-group">
+                <h3>Languages</h3>
+                <div class="chip-list">
+                  <span>Python</span>
+                  <span>TypeScript</span>
+                  <span>JavaScript</span>
+                  <span>Go</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>AI & ML</h3>
+                <div class="chip-list">
+                  <span>OpenAI</span>
+                  <span>Anthropic</span>
+                  <span>Gemini</span>
+                  <span>LangChain</span>
+                  <span>LangGraph</span>
+                  <span>PyTorch</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>Frontend</h3>
+                <div class="chip-list">
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>Tailwind</span>
+                  <span>Vercel</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>Infra & Backend</h3>
+                <div class="chip-list">
+                  <span>FastAPI</span>
+                  <span>Node.js</span>
+                  <span>Postgres</span>
+                  <span>MongoDB</span>
+                  <span>AWS</span>
+                  <span>Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="container contact-wrap">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Let’s build something useful.</h2>
+            </div>
+
+            <div class="contact-card">
+              <p>
+                If you’re building AI products, internal tooling, or platform experiences, I’d love to connect.
+              </p>
+              <div class="contact-links">
+                <a href="mailto:kushalbanda265@gmail.com">kushalbanda265@gmail.com</a>
+                <a href="https://www.linkedin.com/in/kushalbanda/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="https://github.com/kushalBanda" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>© <span id="year"></span> Kushal Banda</p>
+          <p>Built with curiosity and a lot of iteration.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
