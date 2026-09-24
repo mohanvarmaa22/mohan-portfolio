@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A lightweight portfolio website for Kushal Banda, inspired by a modern AI-engineering personal brand but built from scratch to be original and minimal.
+A lightweight portfolio website for Mohan, inspired by a modern software-focused personal brand while keeping the design original and minimal.
 
 ## Structure
 
@@ -20,3 +20,4 @@ Then open `http://localhost:8000`.
 ## Notes
 
 This project is intentionally static and simple so it is easy to extend over time with more work samples, case studies, and personal details.
+# mohan-portfolio
